@@ -9,6 +9,7 @@ router.register(r"tables", views.BookingViewSet, basename="booking")
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("restaurant/", include("Restaurant.urls")),
+    path("api/", include("LittleLemonAPI.urls")),
     path("restaurant/booking/", include(router.urls)),
     #? Djoser authentication
     path("auth/", include("djoser.urls")),
